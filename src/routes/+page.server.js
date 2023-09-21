@@ -8,7 +8,7 @@ export async function load() {
 
     const client = createClient();
 
-    const document  = await client.getByUID('homepage', "page");
+    const document  = await client.getByType('homepage');
     return document
 
 }

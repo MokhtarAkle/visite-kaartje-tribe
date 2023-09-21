@@ -8,7 +8,7 @@ export let data
 </script>
 
 <div id="cardContainer">
-    <article id="animationFront" class="check">
+    <article id="animationFront" class="check" style="background-image: url({data.results[0].data.backgroundimage.url})">
       <header>
         <h1>Mokhtar Akle</h1>
         <p><em>Beginnende Front-end Developer</em></p>
@@ -65,20 +65,6 @@ export let data
   box-sizing:border-box;
 }
 
-html {
-  height:100vh;
-}
-
-body {
-  height:100vh;
-  font-family: sans-serif;
-  display:flex;
-  flex-flow: column nowrap;
-  justify-content:center;
-  align-items:center;
-  color:#10214e;
-  position: relative;
-}
 
 #cardContainer {
   display: flex;
@@ -146,114 +132,10 @@ header > p {
   opacity: 0;
 }
 
-/* .backSide {
-  height: 75vh;
-  max-width: 25em;
-  min-width:20em;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  background-image: url(../assets/stock-background.jpg); */ /* Photo by Philippe Donn: https://www.pexels.com/photo/stars-1257860/ */
-/*   background-position: center;
-  background-size: cover;
-  box-shadow:0 0 20px 20px rgba(0,0,0,.1);
-  border-radius:1rem;
-  transition:.25s;
-  z-index: 3;
-  filter: brightness(100%);
-
-} */
-
-.frontTransformation{
-  animation-name: rotation;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-
-}
-
-.frontTransformationBack{
-  animation-name: rotationB;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-
-#animationMiddle {
-  height: 75vh;
-  max-width: 25em;
-  min-width: 20em;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  background-image: url(../assets/stock-background.jpg);
-  background-position: center;
-  background-size: cover;
-  box-shadow:-10px 0 20px 20px rgba(97, 97, 97, 0.555) inset;
-  border-radius:1rem;
-  z-index: 2;
-  position: absolute;
-  right: -10%;
-}
-
-.middleTransformation{
-  animation-name: flip;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.middleTransformationBack{
-  animation-name: flipB;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-#animationRight {
-  height: 75vh;
-  max-width: 25em;
-  min-width:20em;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  background-image: url(../assets/stock-background.jpg);
-  background-position: center;
-  background-size: cover;
-  box-shadow:-10px 0 20px 20px rgba(77, 76, 76, 0.658) inset;
-  border-radius:1rem;
-  transition:.25s;
-  z-index: 1;
-  position: absolute;
-  right: -18%;
-}
-
-.rightTransformation{
-  animation-name: rotater;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.rightTransformationBack{
-  animation-name: rotaterB;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-
 button {
   border:none;
   position: absolute;
-  right: 40%;
+  right: 48.5%;
   top: 60%;
   width:2.5rem;
   height:2.5rem;
@@ -297,23 +179,6 @@ button svg:nth-of-type(2) {
   right: -20%;
 }
 
-.frontTransformationFlip{
-  animation-name: flipper;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-}
-
-.frontTransformationFlipB{
-  animation-name: flipperB;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-}
 
 @keyframes rotation {
   from{
