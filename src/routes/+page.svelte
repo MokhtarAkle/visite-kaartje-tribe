@@ -1,4 +1,4 @@
-<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=visite-kaartje-tribe">
+<script>
         import { SliceZone } from '@prismicio/svelte';
 
 import {components} from '$lib/slices'
